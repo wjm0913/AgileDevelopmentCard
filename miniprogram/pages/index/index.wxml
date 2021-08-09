@@ -1,0 +1,90 @@
+
+<view>
+    <!-- modal弹窗-->
+    <modalView show="{{showModal}}" bindcancel="modalCancel" bindconfirm='modalConfirm' single='{{single}}'>
+        <view class='modal-content'>
+            <view class="content_flex1">
+                获取您的手机号：
+            </view>
+            <view class="content_flex2">
+                <button wx:if="{{phone === null}}" class="btn-index" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style="width: 100%" type="primary">点击获取</button>
+                <text>{{phone || ''}}</text>
+            </view>
+        </view>
+        <view class='modal-content'>
+            <view class="content_flex1">
+                输入您真实姓名：
+            </view>
+            <view class="content_flex2">
+                <input wx:if="{{inputNameUser === null}}" bind:input="index_inputNameFunc" value="{{inputName}}" class="index_input" placeholder="输入您的姓名"/>
+                <text>{{inputNameUser || ''}}</text>
+            </view>
+        </view>
+        <view class='modal-content'>
+            <view class="content_flex1">
+                输入您的房间号：
+            </view>
+            <view class="content_flex2">
+                <input bind:input="index_inputFunc" value="{{inputV}}" class="index_input" placeholder="大写字母，由主持人发布"/>
+            </view>
+        </view>
+        <text class="index_text">小程序不上传您的手机号到网络,获取到您的手机号将缓存到您的微信小程序本地内存中！请您放心使用,</text>
+    </modalView>
+    <view class="index_img_box">
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+    </view>
+    <view class="index_img_box">
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+    </view>
+    <view class="index_img_box">
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+    </view>
+    <view class="index_img_box">
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+        <view class="index_img">
+            <image class="index_img-img" src="../../img/img8.png"></image>
+        </view>
+    </view>
+
+
+
+<!--    <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">-->
+<!--        <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">-->
+<!--            <view class="swiper-item">-->
+<!--                <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>-->
+<!--                <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>-->
+<!--            </view>-->
+<!--        </swiper-item>-->
+<!--    </swiper>-->
+
+
+</view>
